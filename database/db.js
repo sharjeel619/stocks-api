@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const { mongodb_user, mongodb_password } = process.env;
-const connectionUrl = `mongodb+srv://${mongodb_user}:${mongodb_password}@portfolio.rgkjp.mongodb.net/test?authSource=admin&replicaSet=atlas-8jsjvx-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`;
+const { mongodb_user, mongodb_password, mongodb_host } = process.env;
+const connectionUrl = `mongodb+srv://${mongodb_user}:${mongodb_password}@${mongodb_host}/test?authSource=admin&replicaSet=atlas-8jsjvx-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`;
 const dbName = 'Syrup';
 
 const initDB = async () => {
